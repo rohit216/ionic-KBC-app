@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar class="option1">
+    <ion-title style="color: white;">KBC Home</ion-title>
+    <ion-buttons slot="start">
+    <ion-back-button> </ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="option1">
+  <div ion-padding *ngIf="response">
+    <ion-img class="ion-text" style="width: 50%; height:auto; text-align:center;" src="../assets/img/kbcimage.png"  > </ion-img>
+    <ion-item class="option1" style="text-align: center;">
+        <ion-textarea
+        class="option1"
+        style="color: white;
+        border-color: white;
+        text-align: center;"
+          readonly
+          value="{{response.id}}) {{response.question}}">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-grid style="text-align: center;">
+      <ion-row>  
+      <ion-col>
+        <div>
+          <ion-button class="option2" name="option1" (click)="getName(response.option1)">{{response.option1}}</ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button class="option2" name="option2" (click)="getName(response.option2)">{{response.option2}}</ion-button>          
+        </div>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            <ion-button class="option2" name="option3" (click)="getName(response.option3)">{{response.option3}}</ion-button>
+          </div>
+        </ion-col>      
+        <ion-col>
+          <div>
+            <ion-button class="option2" name="option4" (click)="getName(response.option4)">{{response.option4}}</ion-button>            
+          </div>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+
+    <div class="ion-text-center">
+      <ion-button slot="start" name="next" (click)="loadQuestion()" class="option2"> Next </ion-button>
+      <ion-button slot="start" name="next" (click)="exitQuiz()" class="option2" routerLink = "/start-page"> Exit </ion-button>
+    </div>
+      <br><br>
+      <ion-label style="color: white;">{{answerStatus}}</ion-label> <br>
+      <ion-label style="color: white;" *ngIf="result"> Money Earned {{score}}₹ </ion-label> <br>
+    </div>
+
+</ion-content>

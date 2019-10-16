@@ -1,5 +1,7 @@
 {
   "name": "KbcApplication",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

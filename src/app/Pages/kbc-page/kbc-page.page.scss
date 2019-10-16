@@ -1,0 +1,28 @@
+.option1{
+    --background : #370F4D;   
+}
+.option2{
+    --background : rgb(18, 2, 27);  
+    --border: yellow;
+    --color-hover:yellow;
+}
+
+#background{
+    --background : #370F4D;
+}
+
+.ion-text{
+
+        height: 50vh;
+        width: auto;
+        margin: auto;
+        display: block;
+}
+
+.error-color{
+    --background: red;
+}
+
+.success-color{
+    --background: green;
+}
